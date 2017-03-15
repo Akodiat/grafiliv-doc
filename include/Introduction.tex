@@ -1,0 +1,35 @@
+% CREATED BY DAVID FRISK, 2016
+\chapter{Introduction}
+This chapter introduces the project, its goals and limitations, together with the history of the field of Artificial Life. 
+
+\section{Background} \label{Section_ref}
+Artificial Life research has been ongoing at least since the term was coined in 1986, with a number of different simulator projects being developed over the years. While both computing power and the knowledge of systems biology has increased, there are still a lot of questions remaining to be answered. This master thesis will be on the level of basic research in the principles of ecosystem evolution, niche construction and ecosystem engineering.
+\subsection{Ecosystem evolution}
+
+\subsection{Niche construction}
+
+\subsection{Ecosystem engineering}
+
+\section{Ecological, societal and ethical aspects}
+% Identify, within the parameters of the specific project, the questions that need to be answered in order for the relevant societal, ethical and ecological aspects to be taken into consideration.
+% Take into account and discuss ethical aspects of research and development work, both as regards how the work is to be performed, as well as what is to be investigated/developed
+Simulating an artificial ecosystem certainly has ecological aspects; insights gained during the project can better the understanding of natural ecosystems and their dynamics. Although many differences will exist, as a model will not  - by definition - be the same as the system it tries to model, the effects of an event (e.g. a removal of a top predator species) in a simulation can hint to the possible effects of such an event in a natural ecosystem. 
+
+Furthermore, open-ended evolution has bearing not only on biological evolution but on innovation processes in general. By investigating how adaptive novelty can continually drive the emergence of more adaptive novelty elsewhere, transforming the environments to which it adapts, a better understanding can be reached in the dynamics of other complex systems as well; one such example being societal systems.
+
+Finally, on a more philosophical note, how do you define life? What conditions does an artificial creature need to fulfill in order to be considered living, and will we there at any point arise any ethical obligation to keep a virtual creature alive? At the current time being however, experimenting with an artificial ecosystem can arguably be considered more ethical that experimenting with its natural (and living) variant.
+
+\section{Preliminary aim}
+Understanding the nature of open-ended evolution is an old and open problem and if this project can shed some light on the issue, it could be of large scientific value. This project aims to investigate how life can be simulated using GPU computing.
+
+\section{Objectives}
+The goal is to construct open-ended evolution in a simulated ecosystem, using behavioural models and genetically driven morphology. Emphasis will not be placed on detailed similarity with biological evolution and innovation, but on in-principle similarity with evolution and innovation in complex adaptive systems.
+
+\section{Demarcations}
+%Limitations
+Although the computer used for running the simulations can be considered powerful, it still has limitations regarding the number of particles it is able to simulate in a certain amount of time. Simulating more particles, more generations and more interactions will result in longer simulation times.  Furthermore, since particles are allocated on GPU memory, there will be a limitation on how easily the number of particles simulated could be changed dynamically.
+
+\section{Method} %Is this section really needed? Use Model instead?
+The simulation model was constructed iteratively, with further complexity added along the course of the project. In order to simulate large populations over long periods of time, the project was implemented using the Nvidia CUDA programming on a high-end GPU (nVidia Quadro M6000).
+
+Fluidix bla bla bla
