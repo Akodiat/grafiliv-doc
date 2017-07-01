@@ -1,3 +1,25 @@
 % CREATED BY DAVID FRISK, 2016
-\chapter{Appendix 1}
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+\chapter{Getting started with Grafiliv}
+Grafiliv (short for \emph{grafikkortsliv}, graphics card life) is the program created for running the simulations. Source code and binaries can be found on GitHub: \url{https://github.com/Akodiat/grafiliv}.
+
+In order to run a grafiliv simulation:
+
+\begin{enumerate}
+    \item Obtain binaries by either:
+    \begin{enumerate}
+    \item Compile the source code:
+        \begin{enumerate}
+            \item Download and install the Fluidix library at: \url{http://www.fluidix.ca/}
+            \item Using the Fluidix app, compile \path{\fluidix\grafiliv\grafiliv.cu}
+            \item If you want to compile the GrafilivViewer as well (instead of using the provided binary), download Unity3d \url{https://unity3d.com/} and open and compile the project at \path{\GrafilivViewer}
+        \end{enumerate}
+    \item  Download binaries from the Git repository:
+        \begin{enumerate}
+            \item Download and extract the zip-file corresponding to the version you want to run from \url{https://github.com/Akodiat/grafiliv/tree/master/app}
+        \end{enumerate}
+    \end{enumerate}
+    \item Configure \path{\fluidix\grafiliv\config.txt} with the parameters you desire.
+    \item If compiled for terrain, make sure \path{terrain.stl} is present in the same directory as \path{grafiliv.exe}
+    \item Launch simulation by starting \path{grafiliv.exe}. If an earlier simulation was aborted, you have the option to restart it.
+    \item Use \path{GrafilivViewer.exe}, also located in the same directory as \path{grafiliv.exe}, to inspect the simulated organisms
+\end{enumerate}

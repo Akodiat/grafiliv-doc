@@ -1,23 +1,37 @@
 % CREATED BY DAVID FRISK, 2016
 \chapter{Introduction}
-This chapter introduces the project, its goals and limitations, together with the history of the field of Artificial Life. 
+This chapter introduces the project, its goals and limitations, as well as the history of Artificial Life research. 
 
 \section{Background} \label{Section_ref}
-Artificial Life research has been ongoing at least since the term was coined in 1986, with a number of different simulator projects being developed over the years. While both computing power and the knowledge of systems biology has increased, there are still a lot of questions remaining to be answered. This master thesis will be on the level of basic research in the principles of ecosystem evolution, niche construction and ecosystem engineering.
+The term Artificial Life was first coined by \cite{langton1986studying} in his paper \emph{Studying artificial life with cellular automata}, where he suggests a broadening of the definition of life beyond its organic form.
+
+%Mention Game of life?
+
+A number of different versions of artificial life have since been investigated, either realised in software, hardware or as synthetic biology. These three kinds are usually called "soft", "hard" and "wet" artificial life respectively \citep{bedau2003artificial}.
+
+In 1994, Karl Sims described a soft artificial life system for simulating virtual creatures within a three-dimensional environment and evolving them according to a predefined fitness behaviour \citep{sims1994evolving}.
+
+%Open-ended evolution
+%https://www.academia.edu/256935/Computational_Genetics_Physiology_Metabolism_Neural_Systems_Learning_Vision_and_Behavior_or_Poly_World_Life_In_a_New_Context
+
+While both computing power and the knowledge of systems biology has increased, there are still a lot of questions remaining to be answered. This master thesis will be on the level of basic research in the principles of ecosystem evolution, niche construction and ecosystem engineering.
+
 \subsection{Ecosystem evolution}
 
 \subsection{Niche construction}
+%Cambrian explosion p.228
+%Hutchinson(1957,1967)
 
 \subsection{Ecosystem engineering}
 
 \section{Ecological, societal and ethical aspects}
 % Identify, within the parameters of the specific project, the questions that need to be answered in order for the relevant societal, ethical and ecological aspects to be taken into consideration.
 % Take into account and discuss ethical aspects of research and development work, both as regards how the work is to be performed, as well as what is to be investigated/developed
-Simulating an artificial ecosystem certainly has ecological aspects; insights gained during the project can better the understanding of natural ecosystems and their dynamics. Although many differences will exist, as a model will not  - by definition - be the same as the system it tries to model, the effects of an event (e.g. a removal of a top predator species) in a simulation can hint to the possible effects of such an event in a natural ecosystem. 
+Simulating an artificial ecosystem certainly has ecological aspects; insights gained by constructing and studying artificial ecosystems can be adapted in order to better the understanding of natural ecosystems and their dynamics. Although many differences will exist, at the very least a model will not  - by definition - be the same as the system it tries to model, the effects of an event (e.g. a removal of a top predator species) in a simulation can hint to the possible effects of such an event in a natural ecosystem. 
 
-Furthermore, open-ended evolution has bearing not only on biological evolution but on innovation processes in general. By investigating how adaptive novelty can continually drive the emergence of more adaptive novelty elsewhere, transforming the environments to which it adapts, a better understanding can be reached in the dynamics of other complex systems as well; one such example being societal systems.
+Considering societal aspects, open-ended evolution has bearing not only on biological evolution but also on innovation processes in general. By investigating how adaptive novelty can continually drive the emergence of more adaptive novelty elsewhere, transforming the environments to which it adapts, a better understanding can be reached in the dynamics of other complex systems as well; one such example being societal systems [ref to wicked systems].
 
-Finally, on a more philosophical note, how do you define life? What conditions does an artificial creature need to fulfill in order to be considered living, and will we there at any point arise any ethical obligation to keep a virtual creature alive? At the current time being however, experimenting with an artificial ecosystem can arguably be considered more ethical that experimenting with its natural (and living) variant.
+Finally, on a more philosophical note, how do you define life? Since artificial life is a simulation of the biological life, what conditions does an artificial creature need to fulfil in order to be considered living? If you decide to consider a virtual creature to be living, will there at any point arise an ethical obligation to keep a it alive? At the current time being however, experimenting with an artificial ecosystem can arguably be considered more ethical that experimenting with its natural (and living) variant.
 
 \section{Preliminary aim}
 Understanding the nature of open-ended evolution is an old and open problem and if this project can shed some light on the issue, it could be of large scientific value. This project aims to investigate how life can be simulated using GPU computing.
@@ -32,4 +46,4 @@ Although the computer used for running the simulations can be considered powerfu
 \section{Method} %Is this section really needed? Use Model instead?
 The simulation model was constructed iteratively, with further complexity added along the course of the project. In order to simulate large populations over long periods of time, the project was implemented using the Nvidia CUDA programming on a high-end GPU (nVidia Quadro M6000).
 
-Fluidix bla bla bla
+This work was facilitated using the library \emph{Fluidix} \citep{fluidix}. Fluidix makes it possible to write custom interaction function to be executed on either each particle or each pair of particles within a certain distance from one another. Such interactions are executed in an optimised manner by utilising the power of GPGPU computing.

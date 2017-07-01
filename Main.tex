@@ -4,6 +4,10 @@
 \documentclass[12pt,a4paper,twoside,openright]{report}
 \input{include/settings/Settings}
 
+%Todo notes
+\newcommand\tempText[1]{\fcolorbox{black}{yellow}{\begin{minipage}{0.9\textwidth}{#1}\end{minipage}}}
+%\renewcommand\tempText[1]{}
+
 \begin{document} 
 
 % COVER PAGE, TITLE PAGE AND IMPRINT PAGE
@@ -48,6 +52,9 @@
 
 % RESULTS
 \input{include/Results}
+
+% DISCUSSION
+\input{include/Discussion}
 
 % CONCLUSION
 \input{include/Conclusion}
