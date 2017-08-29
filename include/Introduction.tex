@@ -3,26 +3,40 @@
 This chapter introduces the project, its goals and limitations, as well as the history of Artificial Life research. 
 
 \section{Background} \label{Section_ref}
+
 The term Artificial Life was first coined by \cite{langton1986studying} in his paper \emph{Studying artificial life with cellular automata}, where he suggests a broadening of the definition of life beyond its organic form.
+
+\tempText{Definition of Life}
 
 %Mention Game of life?
 
-A number of different versions of artificial life have since been investigated, either realised in software, hardware or as synthetic biology. These three kinds are usually called "soft", "hard" and "wet" artificial life respectively \citep{bedau2003artificial}.
+A number of different versions of artificial life have been investigated, either realised in software, hardware or as synthetic biology. These three kinds are usually called "soft", "hard" and "wet" artificial life respectively \citep{bedau2003artificial}.
 
-In 1994, Karl Sims described a soft artificial life system for simulating virtual creatures within a three-dimensional environment and evolving them according to a predefined fitness behaviour \citep{sims1994evolving}.
+%https://en.wikipedia.org/wiki/Tierra_(computer_simulation)
+
+%https://en.wikipedia.org/wiki/Polyworld
+%https://www.youtube.com/watch?v=_m97_kL4ox0
+%http://myxo.css.msu.edu/papers/nature2003/Nature03_Complex.pdf
+
+%In 1994, Karl Sims described a soft artificial life system for simulating virtual creatures within a three-dimensional environment and evolving them according to a predefined fitness behaviour \citep{sims1994evolving}.
+
+%https://web.archive.org/web/20090603015231/http://ddi.cs.uni-potsdam.de/HyFISCH/Produzieren/lis_projekt/proj_gamelife/ConwayScientificAmerican.htm
+Many artificial life simulations have had their creatures optimise toward a specific goal, such as distance travelled or likewise, but a few have instead tried the more implicit fitness function of survival alone. As early as 1970 however, John Horton Conway devised the now famous cellular automaton called Game of Life \citep{gardner1970mathematical}. Although computers were used for his more time-consuming experiments many of the smaller ones were carried out manually by hand. The cellular automaton was remarkably lifelike, especially considering the simplicity of its rules. However it took until 2010 before a self-replicating creature could be created in the simulator, achieved by an enthusiast named Andrew Wade \citep{aron2013first}.
+
+In 1992, Thomas S. Ray developed the computer program Tierra \citep{ray1992evolution}. Tierra used the computer memory and CPU time as analogues for energy and material resources in biology. Organisms, having a genome of machine code, reproduce by executing their code to copy themselves, but at a given rate mutations occur in the form of randomly flipped bits in their code. Tierra showed many interesting results in the form of co-evolution, parasitism and symbiosis.
 
 %Open-ended evolution
 %https://www.academia.edu/256935/Computational_Genetics_Physiology_Metabolism_Neural_Systems_Learning_Vision_and_Behavior_or_Poly_World_Life_In_a_New_Context
 
-While both computing power and the knowledge of systems biology has increased, there are still a lot of questions remaining to be answered. This master thesis will be on the level of basic research in the principles of ecosystem evolution, niche construction and ecosystem engineering.
+\tempText{Standish discusses the complexity of the Tierran life and compares it to that of our own biosphere. Complexity, like life itself is a difficult property to define and...}
 
-\subsection{Ecosystem evolution}
+While both computing power and the knowledge of biology has increased, there are still a lot of questions remaining to be answered. This master thesis will be on the level of basic research in the principles of ecosystem evolution, niche construction and ecosystem engineering.
 
-\subsection{Niche construction}
+%\subsection{Ecosystem evolution}
+%\subsection{Niche construction}
 %Cambrian explosion p.228
 %Hutchinson(1957,1967)
-
-\subsection{Ecosystem engineering}
+%\subsection{Ecosystem engineering}
 
 \section{Ecological, societal and ethical aspects}
 % Identify, within the parameters of the specific project, the questions that need to be answered in order for the relevant societal, ethical and ecological aspects to be taken into consideration.
@@ -31,9 +45,9 @@ Simulating an artificial ecosystem certainly has ecological aspects; insights ga
 
 Considering societal aspects, open-ended evolution has bearing not only on biological evolution but also on innovation processes in general. By investigating how adaptive novelty can continually drive the emergence of more adaptive novelty elsewhere, transforming the environments to which it adapts, a better understanding can be reached in the dynamics of other complex systems as well; one such example being societal systems [ref to wicked systems].
 
-Finally, on a more philosophical note, how do you define life? Since artificial life is a simulation of the biological life, what conditions does an artificial creature need to fulfil in order to be considered living? If you decide to consider a virtual creature to be living, will there at any point arise an ethical obligation to keep a it alive? At the current time being however, experimenting with an artificial ecosystem can arguably be considered more ethical that experimenting with its natural (and living) variant.
+Finally, on a more philosophical note, how do you define life? Since artificial life is a simulation of the biological life, what conditions does an artificial creature need to fulfil in order to be considered living? If you decide to consider a virtual creature to be living, will there at any point arise an ethical obligation to keep it alive? At the current time being however, experimenting with an artificial ecosystem can arguably be considered more ethical that experimenting with its natural (and living) variant.
 
-\section{Preliminary aim}
+\section{Aim}
 Understanding the nature of open-ended evolution is an old and open problem and if this project can shed some light on the issue, it could be of large scientific value. This project aims to investigate how life can be simulated using GPU computing.
 
 \section{Objectives}

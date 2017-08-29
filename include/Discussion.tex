@@ -1,26 +1,31 @@
 \chapter{Discussion}
+%Här behandlas resultaten i förhållande till teori och metod och utvärderas med utgångspunkt från syftesformuleringen i inledningen. Diskussionen omfattar även det förväntade resultat som referenslitteraturen (teori, metod, databas) indikerar samt förklarar enskilda specifika resultat och mätdata. Även avvikande resultat och data måste identifieras och förklaras genom synpunkter angående material, teori och utförande. Diskussionen behöver dessutom också anknyta till eller hänvisa till inledningen och problemställningen.
+
+%I vissa situationer kan de två funktionerna resultat och diskussion kombineras till ett avsnitt i en rapport. Fråga din ämneshandledare.
 
 \tempText{
-Add discussion of results... Some previous thoughts follow:
+Add discussion of results... Is complexity increasing over time? Compare to avida etc
+Size comparison of model (vs prev runs) vs biosphere.
+% "A Comparison of Evolutionary Activity in Artificial Evolving Systems and in the Biosphere"
+Some previous thoughts follow:
 }
 
-Two somewhat related parameters greatly influences the success of the system: environment and time. Without a habitable environment, that is having the parameters set to values where the organisms can survive and evolve, the population will, by circular definition, not survive.
+\section{On choosing a suitable environment configuration}
+%Two somewhat related parameters greatly influences the success of the system: environment and time. Without a habitable environment, that is having the parameters set to values where the organisms can survive and evolve, the population will, by circular definition, not survive.
 
-Moreover, as long as the environment is hospitable enough for the organisms to survive, the emerging population will evolve to thrive in that environment. This is analogous to a planet being within the habitable zone of a star. But habitable to whom, one may ask? Other kinds of life would thrive in an environment we find hostile. Some extremofiles certainly already do [ref?] and it very much depends on what we are prepared to call life.
+%Anthropic principle !!!!!!!!!!!
+
+As long as the environment is hospitable enough for the organisms to survive, the emerging population evolves and adapts to thrive in that environment. But how wide is that habitable zone? And habitable to whom, one may ask? Other kinds of life would thrive in an environment we as humans find hostile. Some extremofiles certainly already do  and it very much depends on what we are prepared to call life.
 %evolving clay crystallites [4] nanodes, [18] Betau et al (open problems in alife)
 
-As for time, even a very hostile environment might have life emerging and thriving, given enough time. In a simulation you could have random initial organisms are inserted while others die out. Even more importantly, evolution, at least in the biological sense, needed enormous amounts of time before the emergence of complex life.
+Even a very hostile environment might have life emerging and thriving, given enough time to adapt. In a simulation you could have random initial organisms inserted as others die out, eventually some organism should be able to survive. Biological life needed enormous amounts of time before the emergence of complex life, so in order to avoid spending that amount of time for a simulation it is neccesary to choose a form of life and an environment that are somewhat initially compatible. Thus, the initial organism was created, as described in Section \ref{sec:initOrg}, with multicellularity already included in the model.
 
-\tempText{
-replicators -> cells -> eukaryotes -> multicellularity -> organs -> invertebrates
-}
+%\tempText{replicators -> cells -> eukaryotes -> multicellularity -> organs -> invertebrates}
 
-Since millions of years were of simulation time was beyond the timeframe of this project, the model was constructed to start with multicellularity and to simulate the system at the cellular level. Still it took time before signs of adaption and the more interesting results appeared.
-
-Because this delay of results (it often took more that a day to decide if a given run was viable), together with the difficult search in the huge space of environmental parameters, a long time had to be spent adjusting parameters.
+Still, as expected, it took some time before signs of adaption and the more interesting results began to appear in this simulation. Because this delay of results (it often took more that a day to decide if a given run was viable), together with the difficult search in the huge space of environmental parameters, a long time had to be spent adjusting parameters.
 
 \section{Stopping rule for parameter evaluation}
-There is a dilemma of whether to abort a simulation or to leave it running and hope for better results. If something seem to be wrong with the simulation, is it more strategic to abort it and try another, possibly better environment setup? Or is it better to continue to run and instead hope that the extra time already spent running will be worth more for the end result?
+There is a dilemma of whether to abort a simulation or to leave it running in hope for better results. If something seem to be wrong with the simulation, is it more strategic to abort it and try another, possibly better environment setup? Or is it better to continue to run and instead hope that the extra time already spent running will be worth more for the end result?
 %https://en.wikipedia.org/wiki/Secretary_problem
 
 \section{Modelling level}
@@ -31,8 +36,15 @@ Originally, the model was run solely on a cell-level; with cells replicating ind
 
 A model including mutable cell types, where 
 
+Not all of the cell types were used, vascular only to a small extent, sensor cells almost nothing, buoyancy cells got in the way of photosynthesis, etc
+
 \section{Future work} %Should be final section in discussion
 
 \tempText{
-Sexual reproduction (with crosover), even longer simulations, modelling on an even lower scale to create further open-endedness, etc.
+Sexual reproduction (with crossover), even longer simulations, modelling on an even lower scale to create further open-endedness, etc.
+
+* Really long-term simulation
+* Get initorg correct
+* Improve visualisation to get the terrain correct (enable handling of more particles, save in binary format?)
+* Further output and input from nervous system
 }
