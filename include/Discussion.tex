@@ -4,39 +4,40 @@
 %I vissa situationer kan de två funktionerna resultat och diskussion kombineras till ett avsnitt i en rapport. Fråga din ämneshandledare.
 
 \tempText{
-Add discussion of results... Is complexity increasing over time? Compare to avida etc
+Is complexity increasing over time? Compare to avida etc
 Size comparison of model (vs prev runs) vs biosphere.
 % "A Comparison of Evolutionary Activity in Artificial Evolving Systems and in the Biosphere"
 Some previous thoughts follow:
 }
+
+The results were more numerous than anticipated and it is fascinating to be able to list so many different observed adaptions. Earlier simulations performed with the model still had adaptions within plant organisms were they struggled upwards to gain photosynthetic energy and changed in size to gain more area, but there were hardly any population of decomposer that managed to stay alive and sting cells were nothing but the result of unsuccessful mutations.
+
+The higher trophic levels in this final run is likely due to the increased scale of the model. With a larger arena the number of photosynthetic cells that can gain energy also increases, which means more energy going in to the system. It would seem as if there need to be a certain number of plant organisms in order to sustain a population of decomposers or predators, something that can be likened with the concept of ecological pyramids within biology where the (biomass) amount of plankton, for example, is much larger than the amount of fish. These relations in this model are however not certain and should be investigated in future work.
+
+Some of the cell types were barely used
 
 \section{On choosing a suitable environment configuration}
 %Two somewhat related parameters greatly influences the success of the system: environment and time. Without a habitable environment, that is having the parameters set to values where the organisms can survive and evolve, the population will, by circular definition, not survive.
 
 %Anthropic principle !!!!!!!!!!!
 
-As long as the environment is hospitable enough for the organisms to survive, the emerging population evolves and adapts to thrive in that environment. But how wide is that habitable zone? And habitable to whom, one may ask? Other kinds of life would thrive in an environment we as humans find hostile. Some extremofiles certainly already do  and it very much depends on what we are prepared to call life.
+The results acquired seem to indicate that the environment configuration chosen for the final result was quite good, but it is hard to know how the results would have compared for other configurations without a proper investigation of the parameter space. As for now, the parameters were chosen by a process of trial and error. As long as the environment is hospitable enough for the organisms to survive, the emerging population will evolve and adapt to thrive in that environment. Even a very hostile environment might have life emerging and thriving, given enough time to adapt. You could ensure this by having random initial organisms inserted in a simulation as others die out; eventually some organism should be able to survive with the selected environment configuration. However, in order to avoid spending a large amount of initial time, a form of life and an environment somewhat initially compatible with each other were chosen, with the initial organism as described in Section \ref{sec:initOrg}.
 %evolving clay crystallites [4] nanodes, [18] Betau et al (open problems in alife)
-
-Even a very hostile environment might have life emerging and thriving, given enough time to adapt. In a simulation you could have random initial organisms inserted as others die out, eventually some organism should be able to survive. Biological life needed enormous amounts of time before the emergence of complex life, so in order to avoid spending that amount of time for a simulation it is neccesary to choose a form of life and an environment that are somewhat initially compatible. Thus, the initial organism was created, as described in Section \ref{sec:initOrg}, with multicellularity already included in the model.
 
 %\tempText{replicators -> cells -> eukaryotes -> multicellularity -> organs -> invertebrates}
 
-Still, as expected, it took some time before signs of adaption and the more interesting results began to appear in this simulation. Because this delay of results (it often took more that a day to decide if a given run was viable), together with the difficult search in the huge space of environmental parameters, a long time had to be spent adjusting parameters.
-
-\section{Stopping rule for parameter evaluation}
-There is a dilemma of whether to abort a simulation or to leave it running in hope for better results. If something seem to be wrong with the simulation, is it more strategic to abort it and try another, possibly better environment setup? Or is it better to continue to run and instead hope that the extra time already spent running will be worth more for the end result?
+Still, while a population usually survived with this approach, it took some time before signs of adaption and the more interesting results began to appear in this simulation. Because this delay of results (it often took more that a day to decide if a given run was viable), together with the difficult search in the huge space of environmental parameters, a long time had to be spent adjusting parameters. This leads to a stopping-rule dilemma of whether to abort a simulation or to leave it running in hope for better results. If something seem to be wrong with the simulation, is it more strategic to abort it and try another, possibly better environment setup? Or is it better to continue to run and instead hope that the extra time already spent running will be worth more for the end result? Also, since larger-scale simulations seems to give better results, how large should the simulations be while evaluating other parameters?
 %https://en.wikipedia.org/wiki/Secretary_problem
 
 \section{Modelling level}
 %Principen kan ju diskuteras - att det är viktigt att formulera modellen på rätt nivå. Är det för låg nivå kommer det aldrig igång, om det är för hög nivå så är design space för liten
-An important thing to consider when modelling any system is which level to formulate the model on. A lower level model would increase the open-endedness of the system, allowing for a larger design space. However if it is too low there will not be enough time for interesting results to appear.
+An important thing to consider when modelling any system is which level to formulate the model on. A lower-level model would increase the open-endedness of the system, allowing for a larger design space. However, it would also require more calculations to simulate and with a modelling-level too low there will not be enough time for interesting results to appear.
 
 Originally, the model was run solely on a cell-level; with cells replicating individually. But such a setup proved to be too low-level for any interesting results to appear within a reasonable timeframe. The organisms were still intended to be multicellular, but that would require an emergent change of individuality, something the model did not allow for. Instead, the egg cells were introduced and the organism reproduction was centralised to the organism, not handled by each cell.
 
-A model including mutable cell types, where 
+A model including mutable cell types, where the cells themselves consists of different components, or where the cell types were continuous instead of discrete, could allow for new adaptions unconstrained by the preset cell types used here. However, it would make visualisation harder and could make the dynamics even trickier to balance.
 
-Not all of the cell types were used, vascular only to a small extent, sensor cells almost nothing, buoyancy cells got in the way of photosynthesis, etc
+Not all of the cell types were used. Vascular cells were used only to a small extent, possibly as an adaption, but their numbers were declining during the last 150\,000 time steps as per figure \ref{fig:cellTypesOverTime}. Fat cells were about as numerous, but probably did not have much advantage over egg cells since reproduction was the primary need for energy. Perhaps both vascular and fat cells would still prove useful in larger and more complex phenotypes. Sensor cells were almost never used, this might be due to the way sensors were handled in the model, perhaps more sophisticated senses would work better, or the signal input itself might somehow be incorrectly handled; the nervous systems instead made use of the bias node as input. The buoyancy cells were used as little as the sensors, while many plant organism evolved the strategy of swimming upwards to gain more sunlight, none were successful in using buoyancy cells instead to save energy. This was likely because a buoyant cell tend to end to orient the organism so that it is at its top, and thus getting in the way of photosynthesis. Some phenotype configurations should be able to work with buoyancy cells, if they were spaced symmetrically, however it would seem as if the energy saved from not having to swim upward is not enought to overcome the cost of sacrificing a possible position for a photosynthetic cell.
 
 \section{Future work} %Should be final section in discussion
 

@@ -152,6 +152,8 @@ An organism is modelled to consist of three parts:
 \end{enumerate}
 Each cell has a link to its von Neuman neighbours, so that each pair of neighbour particles can exert a spring force holding the organism together.
 
+\tempText{Note that there is a cost for large network sizes}
+
 \subsection{Genome}
 The genome consists of a CPPN, as described in \ref{subsec:CPPN}, as well as a discrete vector of organism diameters \(\mathbf{D_{org}}=\left(\begin{array}{ccc} d_x & d_y & d_z \\\end{array}\right)\). An organism consists of at least one cell, placed at the origin, while \(\mathbf{D_{org}}\) determines the number of cells outside of it in each direction. Thus, the size of the resulting rectangular cuboid of cells is
 \(\mathbf{S_{org}}=\left(\begin{array}{ccc} 2 d_x + 1 & 2 d_y + 1 & 2 d_z + 1 \\\end{array}\right)\).

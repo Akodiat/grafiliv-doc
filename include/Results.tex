@@ -120,6 +120,8 @@ Observing the top-right chart of Figure \ref{fig:nOrgs} it looks as if the propo
 
 A certain proportion of the organisms could be expected to not be fertile, since there is always a certain non-zero probability for each offspring to be born without egg cells. Since non-fertile organisms per definition cannot produce offspring it is clear to see that their proportion should not increase. However, the fact that the fertile proportion is steadily increasing, instead of remaining constant, seem to show an emerging resilience in the genome against birthing non-fertile offspring.
 
+A majority of all the organisms that ever existed in the simulation never did reproduce, as can be seen in Figure \ref{fig:numberOfChildren}. Some of those were not fertile while most simply died before they had gathered enough energy in their egg cells. Out of those that did reproduce, most had between one and two children, but close to 15 percent of the organisms had more than two children, with one having as many as 27.
+
 \begin{figure}
   \begin{center}
   \includegraphics[width=0.6\textwidth]{figure/fertileProp}
@@ -127,6 +129,18 @@ A certain proportion of the organisms could be expected to not be fertile, since
     Number of fertile organisms divided by the total number of organisms over time.
   }
   \label{fig:fertileProp}
+  \end{center}
+\end{figure}
+
+\begin{figure}
+  \begin{center}
+  
+  \includegraphics[width=0.6\textwidth]{figure/nChildrenPie}
+  \includegraphics[width=0.8\textwidth]{figure/nChildrenHistogram}
+  \caption{
+    Distribution of number of children per organism, given all organisms throughout the whole simulation. A majority of the organisms never reproduced but multiple children are not uncommon among those that did, as can be seen in the histogram on the bottom. Note that the y-axis is logarithmic and that the amount of children as such follows a power-law distribution.
+  }
+  \label{fig:numberOfChildren}
   \end{center}
 \end{figure}
 
@@ -164,7 +178,7 @@ The third column of the table, \emph{plantC}, shows a plant organism that reside
         \(\left(\begin{array}{l} 108.528\\ 74.7777\\ 341.747\end{array}\right)\) &
         \(\left(\begin{array}{l} 39.015\\ 149.276\\ 254.073\end{array}\right)\)\\ \hline
  \end{tabular}
-\caption{Example of three different plant organisms, each using photosynthesis but occupying different parts of the arena and having different adaptions}
+\caption{Example of three different plant organisms, each using photosynthesis but occupying different parts of the arena and having different adaptions.}
 \label{tab:3plants}
 \end{table}
 
@@ -245,7 +259,7 @@ Compared to the three example organisms from the plant and decomposer lineages, 
 \end{table}
 
 \subsection{Inter-lineage relations}
-From each lineage type, plants, decomposers and predators, three example organisms were chosen and investigated for their common ancestors. The resulting family tree is illustrated in figure \ref{fig:familyTree}.
+From each lineage type, plants, decomposers and predators, three example organisms were chosen and investigated for their common ancestors. The resulting family tree is illustrated in figure \ref{fig:familyTree}. It can be seen already from the phenotype that similar organisms tend to be closer related. The plants and the predators actually share a more recent common ancestor compared to the decomposers, however since that plant is born very early, at generation 15, this should not hold much significance and can be mostly regarded as a result of the selected organisms.
 
 \begin{figure}
   \begin{center}
@@ -265,3 +279,25 @@ From each lineage type, plants, decomposers and predators, three example organis
     \label{fig:familyTree}
 \end{figure}
 % Det roligaste vore ju om det gick att följa en någorlunda lång körning där det uppstår några adapterade linjer - arter blir det ju inte eftersom de inte fortplantar sig sexuellt. Då skulle du kunna avbilda dem och beskriva vad de gör och hur deras fenotyper verkar vara adapterade. Sen skulle du kunna följa dem bakåt för att se hur tidigare former ser ut, när dessa anpassningar uppstod och så vidare. Sen skulle du kunna plocka ut en representant för varje sort och visa släktträdet. Hur såg den senaste gemensamma föregångaren till dem ut? Kanske displayat i ett träd. Hur har ekosystemet utvecklats? Har olika trofiska nivåer uppstått? Två nivåer har vi ju sett: sol och detritus - fattas då bara predatorer.
+
+\section{Genomes over time}
+Figure with increasing genome and nervous system sizes
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=0.7\textwidth]{figure/genomeSizes}
+  \caption{
+    Figure with increasing genome and nervous system sizes
+  }
+  \label{fig:genomeSizes}
+  \end{center}
+\end{figure}
+
+\begin{figure}[ht]
+    \begin{center}
+        \makebox[\textwidth]{\includegraphics[width=0.9\paperwidth]{"figure/org574174 genome"}}
+    \end{center}
+    \caption{Genome (left) and nervous system (right) of the surface-dwelling plant with id 574174.}
+    \label{fig:planGgenome}
+\end{figure}
+
+\tempText{Nodes filled with blue???}
